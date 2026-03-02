@@ -24,7 +24,7 @@ body{
 
 .nav-links a{
     text-decoration: none;
-    color:antiquewhite;
+    color:rgb(red, green, blue);
     transition: 0.3ms;
 }
 
@@ -33,7 +33,7 @@ body{
     justify-content: center;
     align-items:center;
     height:60vh;
-    background: #fff;
+    background: #f4f4f4;
     text-align:center;
     padding:20px;
 }
@@ -47,7 +47,7 @@ body{
     margin-top: 15px;
     padding:10px 20px;
     border:none;
-    color:white;
+    color:#f4f4;
     cursor:crosshair;
     transition:0.3s;
 }
