@@ -1,0 +1,76 @@
+/* ===== CSS CUSTOM PROPERTIES / VARIABLES ===== */
+:root {
+  /* Colors */
+  --color-primary: #0f4c81;
+  --color-primary-dark: #0a3560;
+  --color-primary-light: #4a86c8;
+  --color-secondary: #f7941d;
+  --color-accent: #2ecc71;
+
+  --color-bg: #f4f7fb;
+  --color-bg-alt: #ffffff;
+  --color-bg-dark: #0d1b2a;
+
+  --color-text: #1a1a2e;
+  --color-text-muted: #5a6a7e;
+  --color-text-light: #ffffff;
+
+  --color-border: #dde4ef;
+  --color-shadow: rgba(15, 76, 129, 0.15);
+
+  /* Typography */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.5rem;
+  --fs-4xl: 3.5rem;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-padding: 1.5rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 32px rgba(15,76,129,0.13);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Nav height */
+  --nav-height: 70px;
+}

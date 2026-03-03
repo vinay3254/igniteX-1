@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Vinay GK – Web Developer & Designer" />
+  <title>Contact | Vinay GK</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="navbar__logo">Vinay<span>GK</span></a>
+        <ul class="navbar__nav" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero" aria-label="Page header">
+      <div class="container">
+        <span class="tag animate-fadeInUp">Say Hello</span>
+        <h1 class="page-hero__title animate-fadeInUp delay-1">Get In <span style="color:var(--color-primary)">Touch</span></h1>
+        <nav class="page-hero__breadcrumb animate-fadeInUp delay-2" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span>Contact</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact section" aria-label="Contact information and form">
+      <div class="container">
+
+        <!-- Left: Info -->
+        <div class="contact__info">
+          <span class="tag">Contact Me</span>
+          <h2 class="section-title">Let's <span>Connect</span></h2>
+          <p class="contact__info-text">
+            Have a project idea, want to collaborate, or just want to say hi? I'd love to hear from you. Reach out through the form or any of the channels below.
+          </p>
+
+          <div class="contact__details">
+            <div class="contact__detail">
+              <div class="contact__detail-icon">📧</div>
+              <div class="contact__detail-content">
+                <h4>Email</h4>
+                <p>vinaygk@email.com</p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon">📍</div>
+              <div class="contact__detail-content">
+                <h4>Location</h4>
+                <p>India</p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon">💼</div>
+              <div class="contact__detail-content">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/vinaygk</p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon">🐙</div>
+              <div class="contact__detail-content">
+                <h4>GitHub</h4>
+                <p>github.com/vinaygk</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Availability Badge -->
+          <div style="background:rgba(46,204,113,0.1); border:1px solid rgba(46,204,113,0.3); border-radius:var(--radius-lg); padding:var(--space-4) var(--space-6); display:flex; align-items:center; gap:var(--space-3);">
+            <span style="font-size:1.5rem;">✅</span>
+            <div>
+              <p style="font-weight:var(--fw-semibold); color:var(--color-accent); font-size:var(--fs-sm);">Available for Work</p>
+              <p style="color:var(--color-text-muted); font-size:var(--fs-xs);">Open to freelance projects &amp; collaborations</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact__form">
+          <h3 style="font-size:var(--fs-xl); font-family:var(--font-heading); margin-bottom:var(--space-6);">Send a Message 💬</h3>
+          <form id="contactForm" novalidate aria-label="Contact form">
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="firstName">First Name *</label>
+                <input class="form__input" type="text" id="firstName" name="firstName" placeholder="Vinay" required aria-required="true" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="lastName">Last Name *</label>
+                <input class="form__input" type="text" id="lastName" name="lastName" placeholder="GK" required aria-required="true" />
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email">Email Address *</label>
+              <input class="form__input" type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="subject">Subject *</label>
+              <input class="form__input" type="text" id="subject" name="subject" placeholder="Project Inquiry / Collaboration" required aria-required="true" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="message">Message *</label>
+              <textarea class="form__textarea" id="message" name="message" placeholder="Tell me about your project or just say hello..." required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Send Message 🚀
+            </button>
+            <p id="formSuccess" style="display:none; color:var(--color-accent); font-weight:var(--fw-semibold); text-align:center; margin-top:var(--space-4);">✅ Message sent! I'll get back to you soon.</p>
+            <p id="formError" style="display:none; color:#e74c3c; font-weight:var(--fw-semibold); text-align:center; margin-top:var(--space-4);">⚠️ Please fill in all required fields correctly.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" style="background:var(--color-bg-alt);" aria-label="Frequently asked questions">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:var(--space-10);">
+          <span class="tag">FAQ</span>
+          <h2 class="section-title" style="margin:var(--space-4) auto var(--space-4);">Common <span>Questions</span></h2>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:var(--space-6); max-width:900px; margin:0 auto;">
+          <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-6); border:1px solid var(--color-border);">
+            <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold); margin-bottom:var(--space-3); color:var(--color-primary);">🕐 What's your response time?</h3>
+            <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">I typically respond within 24–48 hours. For urgent matters, reach out directly on LinkedIn.</p>
+          </div>
+          <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-6); border:1px solid var(--color-border);">
+            <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold); margin-bottom:var(--space-3); color:var(--color-primary);">💻 What projects do you take?</h3>
+            <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">I work on landing pages, portfolio sites, UI design, dashboards, and front-end development projects.</p>
+          </div>
+          <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-6); border:1px solid var(--color-border);">
+            <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold); margin-bottom:var(--space-3); color:var(--color-primary);">🌍 Do you work remotely?</h3>
+            <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">Yes! I'm fully remote-friendly and can collaborate with clients and teams across any time zone.</p>
+          </div>
+          <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-6); border:1px solid var(--color-border);">
+            <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold); margin-bottom:var(--space-3); color:var(--color-primary);">🤝 Open to internships?</h3>
+            <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">Absolutely! I'm always looking for opportunities to grow, learn, and contribute to real-world teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__brand">
+        <div class="footer__logo">VinayGK.</div>
+        <p>Building clean, responsive web experiences with modern HTML, CSS, and JavaScript.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="GitHub">🐙</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Email">✉️</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Skills</h4>
+        <ul class="footer__links">
+          <li><a href="#">HTML5 &amp; CSS3</a></li>
+          <li><a href="#">Flexbox &amp; Grid</a></li>
+          <li><a href="#">Responsive Design</a></li>
+          <li><a href="#">JavaScript</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Vinay GK. Crafted with ❤️ using HTML &amp; CSS.</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

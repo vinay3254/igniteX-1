@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vinay GK – Creative Web Developer & Designer Portfolio" />
+  <title>Vinay GK | Portfolio</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="navbar__logo">Vinay<span>GK</span></a>
+        <ul class="navbar__nav" id="navMenu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home" aria-label="Hero section">
+      <div class="container">
+        <div class="hero__content animate-fadeInUp">
+          <span class="hero__greeting">👋 Hello, I'm</span>
+          <h1 class="hero__title">
+            Vinay GK
+            <span>Web Developer &amp; Designer</span>
+          </h1>
+          <p class="hero__subtitle">
+            I build clean, responsive, and engaging web experiences using semantic HTML, well-structured CSS, and modern layout techniques.
+          </p>
+          <div class="hero__actions">
+            <a href="projects.html" class="btn btn-primary">View My Work →</a>
+            <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+          </div>
+          <div class="hero__social" aria-label="Social media links">
+            <a href="#" aria-label="GitHub">🐙</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Email">✉️</a>
+          </div>
+        </div>
+
+        <div class="hero__image animate-fadeInUp delay-2">
+          <div class="hero__avatar">
+            <div class="hero__avatar-circle">👨‍💻</div>
+            <div class="hero__badge hero__badge--design">🎨 UI Design</div>
+            <div class="hero__badge hero__badge--code">💻 Clean Code</div>
+            <div class="hero__badge hero__badge--creative">⚡ Creative</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about section" id="about" aria-label="About section">
+      <div class="container">
+        <div class="about__image-wrapper animate-fadeInUp">
+          <div class="about__image-card">🚀</div>
+          <div class="about__stats">
+            <div class="about__stat">
+              <div class="about__stat-number">10+</div>
+              <div class="about__stat-label">Projects</div>
+            </div>
+            <div class="about__stat">
+              <div class="about__stat-number">3+</div>
+              <div class="about__stat-label">Years Learning</div>
+            </div>
+            <div class="about__stat">
+              <div class="about__stat-number">100%</div>
+              <div class="about__stat-label">Passion</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__content animate-fadeInUp delay-2">
+          <span class="tag">About Me</span>
+          <h2 class="section-title">Passionate About <span>Building</span></h2>
+          <p class="about__text">
+            Hi! I'm Vinay GK, a dedicated web developer and designer focused on crafting responsive, visually appealing, and user-friendly websites. I believe great code is the foundation of great design.
+          </p>
+          <p class="about__text">
+            My approach combines semantic HTML structure, organized CSS, and modern layout techniques like Flexbox and CSS Grid to deliver polished digital experiences.
+          </p>
+          <div class="about__skills">
+            <span class="about__skill-tag">HTML5</span>
+            <span class="about__skill-tag">CSS3</span>
+            <span class="about__skill-tag">Flexbox</span>
+            <span class="about__skill-tag">CSS Grid</span>
+            <span class="about__skill-tag">Responsive Design</span>
+            <span class="about__skill-tag">JavaScript</span>
+            <span class="about__skill-tag">UI/UX Design</span>
+            <span class="about__skill-tag">Git</span>
+          </div>
+          <a href="about.html" class="btn btn-primary" style="width:fit-content;">Know More →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="skills section" id="skills" aria-label="Skills section">
+      <div class="container">
+        <span class="tag">What I Do</span>
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <p class="section-subtitle">Technologies and tools I use to build modern, high-quality web solutions.</p>
+
+        <div class="skills__grid">
+          <article class="skills__card">
+            <div class="skills__card-icon">🌐</div>
+            <h3 class="skills__card-title">Frontend Development</h3>
+            <ul class="skills__list">
+              <li class="skills__item">
+                <div class="skills__item-header"><span>HTML5</span><span>95%</span></div>
+                <div class="skills__bar"><div class="skills__bar-fill" style="width:95%"></div></div>
+              </li>
+              <li class="skills__item">
+                <div class="skills__item-header"><span>CSS3</span><span>90%</span></div>
+                <div class="skills__bar"><div class="skills__bar-fill" style="width:90%"></div></div>
+              </li>
+              <li class="skills__item">
+                <div class="skills__item-header"><span>JavaScript</span><span>78%</span></div>
+                <div class="skills__bar"><div class="skills__bar-fill" style="width:78%"></div></div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="skills__card">
+            <div class="skills__card-icon">🎨</div>
+            <h3 class="skills__card-title">Design & Layout</h3>
+            <ul class="skills__list">
+              <li class="skills__item">
+                <div class="skills__item-header"><span>Flexbox</span><span>93%</span></div>
+                <div class="skills__bar"><div class="skills__bar-fill" style="width:93%"></div></div>
+              </li>
+              <li class="skills__item">
+                <div class="skills__item-header"><span>CSS Grid</span><span>88%</span></div>
+                <div class="skills__bar"><div class="skills__bar-fill" style="width:88%"></div></div>
+              </li>
+              <li class="skills__item">
+                <div class="skills__item-header"><span>Responsive Design</span><span>92%</span></div>
+                <div class="skills__bar"><div class="skills__bar-fill" style="width:92%"></div></div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="skills__card">
+            <div class="skills__card-icon">🛠️</div>
+            <h3 class="skills__card-title">Tools & Others</h3>
+            <ul class="skills__list">
+              <li class="skills__item">
+                <div class="skills__item-header"><span>Git & GitHub</span><span>82%</span></div>
+                <div class="skills__bar"><div class="skills__bar-fill" style="width:82%"></div></div>
+              </li>
+              <li class="skills__item">
+                <div class="skills__item-header"><span>Figma</span><span>72%</span></div>
+                <div class="skills__bar"><div class="skills__bar-fill" style="width:72%"></div></div>
+              </li>
+              <li class="skills__item">
+                <div class="skills__item-header"><span>VS Code</span><span>96%</span></div>
+                <div class="skills__bar"><div class="skills__bar-fill" style="width:96%"></div></div>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section class="projects section" id="projects" aria-label="Featured projects section">
+      <div class="container">
+        <span class="tag">My Work</span>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <p class="section-subtitle">A selection of my best work showcasing design and development skills.</p>
+
+        <div class="projects__grid">
+          <article class="project-card">
+            <div class="project-card__thumb project-card__thumb--blue">🖥️</div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS Grid</span>
+              </div>
+              <h3 class="project-card__title">Tech Agency Landing Page</h3>
+              <p class="project-card__desc">A professional tech agency landing page with services grid, team section, and animated hero using CSS Grid and custom properties.</p>
+              <div class="project-card__links">
+                <a href="projects.html">Live Demo →</a>
+                <a href="projects.html">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__thumb project-card__thumb--orange">📊</div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">Flexbox</span>
+              </div>
+              <h3 class="project-card__title">Dashboard UI</h3>
+              <p class="project-card__desc">A clean admin dashboard UI with sidebar navigation, stats cards, and data layout built using Flexbox for precise alignment.</p>
+              <div class="project-card__links">
+                <a href="projects.html">Live Demo →</a>
+                <a href="projects.html">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__thumb project-card__thumb--green">🌿</div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <h3 class="project-card__title">Personal Portfolio</h3>
+              <p class="project-card__desc">A fully responsive personal portfolio with smooth animations, CSS design tokens, and a modern layout using Grid and Flexbox together.</p>
+              <div class="project-card__links">
+                <a href="projects.html">Live Demo →</a>
+                <a href="projects.html">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align:center; margin-top: var(--space-10);">
+          <a href="projects.html" class="btn btn-outline">View All Projects →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section" style="background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); text-align:center;" aria-label="Call to action">
+      <div class="container">
+        <h2 style="color:white; font-size: var(--fs-3xl); margin-bottom: var(--space-4);">Let's Build Something Great 🚀</h2>
+        <p style="color:rgba(255,255,255,0.85); font-size:var(--fs-md); margin-bottom: var(--space-8); max-width:500px; margin-left:auto; margin-right:auto;">
+          Have a project in mind? I'd love to collaborate and bring your ideas to life.
+        </p>
+        <a href="contact.html" class="btn" style="background:white; color:var(--color-primary); font-weight:var(--fw-bold);">Get In Touch →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__brand">
+        <div class="footer__logo">VinayGK.</div>
+        <p>Building clean, responsive web experiences with modern HTML, CSS, and JavaScript.</p>
+        <div class="footer__social" aria-label="Social links">
+          <a href="#" aria-label="GitHub">🐙</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Email">✉️</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Skills</h4>
+        <ul class="footer__links">
+          <li><a href="#">HTML5 & CSS3</a></li>
+          <li><a href="#">Flexbox & Grid</a></li>
+          <li><a href="#">Responsive Design</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Vinay GK. Crafted with ❤️ using HTML & CSS.</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

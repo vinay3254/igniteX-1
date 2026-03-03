@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Vinay GK – Web Developer & Designer" />
+  <title>Projects | Vinay GK</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="navbar__logo">Vinay<span>GK</span></a>
+        <ul class="navbar__nav" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero" aria-label="Page header">
+      <div class="container">
+        <span class="tag animate-fadeInUp">My Work</span>
+        <h1 class="page-hero__title animate-fadeInUp delay-1">My <span style="color:var(--color-primary)">Projects</span></h1>
+        <nav class="page-hero__breadcrumb animate-fadeInUp delay-2" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span>Projects</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ===== FILTER BAR ===== -->
+    <section style="background:var(--color-bg-alt); padding:var(--space-6) 0;" aria-label="Project filters">
+      <div class="container">
+        <div style="display:flex; align-items:center; gap:var(--space-3); flex-wrap:wrap;">
+          <span style="color:var(--color-text-muted); font-size:var(--fs-sm); font-weight:var(--fw-medium);">Filter:</span>
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="html-css">HTML &amp; CSS</button>
+          <button class="filter-btn" data-filter="layout">Layout</button>
+          <button class="filter-btn" data-filter="responsive">Responsive</button>
+          <button class="filter-btn" data-filter="js">JavaScript</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS GRID ===== -->
+    <section class="projects section" aria-label="All projects">
+      <div class="container">
+        <div class="projects__grid" id="projectsGrid">
+
+          <article class="project-card" data-category="html-css layout">
+            <div class="project-card__thumb project-card__thumb--blue">🖥️</div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS Grid</span>
+              </div>
+              <h2 class="project-card__title">Tech Agency Landing Page</h2>
+              <p class="project-card__desc">A professional tech agency landing page with services grid, animated hero, team section, and testimonials — built with CSS Grid and custom properties.</p>
+              <div class="project-card__links">
+                <a href="#">Live Demo →</a>
+                <a href="#">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="layout html-css">
+            <div class="project-card__thumb project-card__thumb--orange">📊</div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">Flexbox</span>
+              </div>
+              <h2 class="project-card__title">Admin Dashboard UI</h2>
+              <p class="project-card__desc">A clean admin dashboard UI with sidebar navigation, stats cards, charts placeholder, and user table — using Flexbox for precise alignment.</p>
+              <div class="project-card__links">
+                <a href="#">Live Demo →</a>
+                <a href="#">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="html-css responsive">
+            <div class="project-card__thumb project-card__thumb--green">🌿</div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <h2 class="project-card__title">Personal Portfolio</h2>
+              <p class="project-card__desc">A fully responsive personal portfolio with smooth animations, CSS design tokens, and a modern layout using Grid and Flexbox together.</p>
+              <div class="project-card__links">
+                <a href="#">Live Demo →</a>
+                <a href="#">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="js html-css">
+            <div class="project-card__thumb project-card__thumb--navy">🌦️</div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <h2 class="project-card__title">Weather App UI</h2>
+              <p class="project-card__desc">A weather app UI featuring glassmorphism design, animated weather icons, and a dark/light mode toggle built with CSS variables and JavaScript.</p>
+              <div class="project-card__links">
+                <a href="#">Live Demo →</a>
+                <a href="#">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="html-css responsive layout">
+            <div class="project-card__thumb project-card__thumb--yellow">🍔</div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Flexbox</span>
+              </div>
+              <h2 class="project-card__title">Food Delivery Website</h2>
+              <p class="project-card__desc">A food delivery website with a full-screen hero, menu card grid, order form, and smooth scroll navigation — built with Flexbox and CSS animations.</p>
+              <div class="project-card__links">
+                <a href="#">Live Demo →</a>
+                <a href="#">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="js responsive">
+            <div class="project-card__thumb project-card__thumb--teal">📋</div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <h2 class="project-card__title">Quiz App</h2>
+              <p class="project-card__desc">An interactive quiz application with score tracking, timer, progress bar, and a results screen — built with vanilla JavaScript and a responsive CSS layout.</p>
+              <div class="project-card__links">
+                <a href="#">Live Demo →</a>
+                <a href="#">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TECH STACK ===== -->
+    <section class="section" style="background:var(--color-bg-alt); text-align:center;" aria-label="Technologies used">
+      <div class="container">
+        <span class="tag">Tech Stack</span>
+        <h2 class="section-title" style="margin:var(--space-4) auto var(--space-4);">Built With</h2>
+        <p class="section-subtitle" style="margin:0 auto var(--space-10);">Tools and technologies powering my projects.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:var(--space-4); justify-content:center;">
+          <div style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:var(--space-4) var(--space-6); display:flex; align-items:center; gap:var(--space-3); font-weight:var(--fw-semibold); box-shadow:var(--shadow-sm);">🌐 HTML5</div>
+          <div style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:var(--space-4) var(--space-6); display:flex; align-items:center; gap:var(--space-3); font-weight:var(--fw-semibold); box-shadow:var(--shadow-sm);">🎨 CSS3</div>
+          <div style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:var(--space-4) var(--space-6); display:flex; align-items:center; gap:var(--space-3); font-weight:var(--fw-semibold); box-shadow:var(--shadow-sm);">📐 Flexbox</div>
+          <div style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:var(--space-4) var(--space-6); display:flex; align-items:center; gap:var(--space-3); font-weight:var(--fw-semibold); box-shadow:var(--shadow-sm);">🔲 CSS Grid</div>
+          <div style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:var(--space-4) var(--space-6); display:flex; align-items:center; gap:var(--space-3); font-weight:var(--fw-semibold); box-shadow:var(--shadow-sm);">⚡ JavaScript</div>
+          <div style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:var(--space-4) var(--space-6); display:flex; align-items:center; gap:var(--space-3); font-weight:var(--fw-semibold); box-shadow:var(--shadow-sm);">📱 Responsive</div>
+          <div style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:var(--space-4) var(--space-6); display:flex; align-items:center; gap:var(--space-3); font-weight:var(--fw-semibold); box-shadow:var(--shadow-sm);">🐙 Git</div>
+          <div style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:var(--space-4) var(--space-6); display:flex; align-items:center; gap:var(--space-3); font-weight:var(--fw-semibold); box-shadow:var(--shadow-sm);">🎭 Figma</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__brand">
+        <div class="footer__logo">VinayGK.</div>
+        <p>Building clean, responsive web experiences with modern HTML, CSS, and JavaScript.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="GitHub">🐙</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Email">✉️</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Skills</h4>
+        <ul class="footer__links">
+          <li><a href="#">HTML5 &amp; CSS3</a></li>
+          <li><a href="#">Flexbox &amp; Grid</a></li>
+          <li><a href="#">Responsive Design</a></li>
+          <li><a href="#">JavaScript</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Vinay GK. Crafted with ❤️ using HTML &amp; CSS.</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

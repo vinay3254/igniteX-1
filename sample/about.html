@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Vinay GK – Web Developer & Designer" />
+  <title>About | Vinay GK</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="navbar__logo">Vinay<span>GK</span></a>
+        <ul class="navbar__nav" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero" aria-label="Page header">
+      <div class="container">
+        <span class="tag animate-fadeInUp">Who I Am</span>
+        <h1 class="page-hero__title animate-fadeInUp delay-1">About <span style="color:var(--color-primary)">Me</span></h1>
+        <nav class="page-hero__breadcrumb animate-fadeInUp delay-2" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span>About</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ===== BIO SECTION ===== -->
+    <section class="section" style="background:var(--color-bg-alt);" aria-label="Biography">
+      <div class="container">
+        <div style="display:grid; grid-template-columns:1fr 1.3fr; gap:var(--space-16); align-items:center;">
+
+          <div style="display:flex; flex-direction:column; gap:var(--space-6);">
+            <div style="background:linear-gradient(135deg,var(--color-primary),var(--color-secondary)); border-radius:var(--radius-xl); padding:var(--space-12); text-align:center; font-size:8rem; box-shadow:var(--shadow-lg);">👨‍🎓</div>
+            <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-6); border:1px solid var(--color-border); display:flex; flex-direction:column; gap:var(--space-3);">
+              <div style="display:flex; justify-content:space-between; padding-bottom:var(--space-3); border-bottom:1px solid var(--color-border);">
+                <span style="color:var(--color-text-muted); font-size:var(--fs-sm);">Name</span>
+                <span style="font-weight:var(--fw-semibold); font-size:var(--fs-sm);">Vinay GK</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; padding-bottom:var(--space-3); border-bottom:1px solid var(--color-border);">
+                <span style="color:var(--color-text-muted); font-size:var(--fs-sm);">Role</span>
+                <span style="font-weight:var(--fw-semibold); font-size:var(--fs-sm);">Web Developer</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; padding-bottom:var(--space-3); border-bottom:1px solid var(--color-border);">
+                <span style="color:var(--color-text-muted); font-size:var(--fs-sm);">Education</span>
+                <span style="font-weight:var(--fw-semibold); font-size:var(--fs-sm);">B.Tech / BCA</span>
+              </div>
+              <div style="display:flex; justify-content:space-between;">
+                <span style="color:var(--color-text-muted); font-size:var(--fs-sm);">Available</span>
+                <span style="font-weight:var(--fw-semibold); font-size:var(--fs-sm); color:var(--color-accent);">✅ Yes</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:var(--space-6);">
+            <span class="tag">My Story</span>
+            <h2 class="section-title">Crafting Digital <span>Experiences</span></h2>
+            <p style="color:var(--color-text-muted); font-size:var(--fs-md); line-height:1.8;">
+              I'm Vinay GK, a passionate web developer and designer who loves building clean, functional, and visually compelling digital products. My journey started with a fascination for how the web works — and it grew into a full-on passion for front-end development.
+            </p>
+            <p style="color:var(--color-text-muted); font-size:var(--fs-md); line-height:1.8;">
+              I specialize in semantic HTML, well-structured CSS, and modern layout techniques. I enjoy solving real-world problems through thoughtful design and clean code.
+            </p>
+            <p style="color:var(--color-text-muted); font-size:var(--fs-md); line-height:1.8;">
+              My goal is to build web experiences that are not just beautiful, but also accessible, performant, and a joy to use.
+            </p>
+            <div style="display:flex; gap:var(--space-4); flex-wrap:wrap;">
+              <a href="contact.html" class="btn btn-primary">Hire Me →</a>
+              <a href="#" class="btn btn-outline">Download CV ↓</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION & EXPERIENCE ===== -->
+    <section class="section" style="background:var(--color-bg);" aria-label="Education and Experience">
+      <div class="container">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-12);">
+
+          <!-- Education -->
+          <div>
+            <span class="tag">Education</span>
+            <h2 class="section-title" style="margin-bottom:var(--space-8);">Academic <span>Journey</span></h2>
+            <div style="display:flex; flex-direction:column; gap:var(--space-6);">
+              <div style="background:var(--color-bg-alt); border-radius:var(--radius-lg); padding:var(--space-6); border-left:4px solid var(--color-primary); box-shadow:var(--shadow-sm);">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:var(--space-2);">
+                  <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold);">B.Tech / BCA – Computer Science</h3>
+                  <span class="tag" style="white-space:nowrap;">2022–2026</span>
+                </div>
+                <p style="color:var(--color-primary); font-size:var(--fs-sm); font-weight:var(--fw-medium); margin-bottom:var(--space-2);">University / College Name</p>
+                <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">Studying core computer science concepts including web development, data structures, algorithms, and software engineering.</p>
+              </div>
+
+              <div style="background:var(--color-bg-alt); border-radius:var(--radius-lg); padding:var(--space-6); border-left:4px solid var(--color-secondary); box-shadow:var(--shadow-sm);">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:var(--space-2);">
+                  <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold);">Higher Secondary (12th)</h3>
+                  <span class="tag" style="white-space:nowrap;">2020–2022</span>
+                </div>
+                <p style="color:var(--color-secondary); font-size:var(--fs-sm); font-weight:var(--fw-medium); margin-bottom:var(--space-2);">School Name</p>
+                <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">Science stream with focus on Mathematics and Computer Science. Developed early interest in technology and programming.</p>
+              </div>
+
+              <div style="background:var(--color-bg-alt); border-radius:var(--radius-lg); padding:var(--space-6); border-left:4px solid var(--color-accent); box-shadow:var(--shadow-sm);">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:var(--space-2);">
+                  <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold);">Matriculation (10th)</h3>
+                  <span class="tag" style="white-space:nowrap;">2020</span>
+                </div>
+                <p style="color:var(--color-accent); font-size:var(--fs-sm); font-weight:var(--fw-medium); margin-bottom:var(--space-2);">School Name</p>
+                <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">Completed with distinction. Active participant in science and technology competitions.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div>
+            <span class="tag">Achievements</span>
+            <h2 class="section-title" style="margin-bottom:var(--space-8);">Certifications &amp; <span>Experience</span></h2>
+            <div style="display:flex; flex-direction:column; gap:var(--space-6);">
+              <div style="background:var(--color-bg-alt); border-radius:var(--radius-lg); padding:var(--space-6); border-left:4px solid var(--color-primary); box-shadow:var(--shadow-sm);">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:var(--space-2);">
+                  <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold);">Web Development Bootcamp</h3>
+                  <span class="tag" style="white-space:nowrap;">2024</span>
+                </div>
+                <p style="color:var(--color-primary); font-size:var(--fs-sm); font-weight:var(--fw-medium); margin-bottom:var(--space-2);">Udemy / Coursera</p>
+                <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">Completed an in-depth bootcamp covering HTML5, CSS3, JavaScript, responsive design, and modern web best practices.</p>
+              </div>
+
+              <div style="background:var(--color-bg-alt); border-radius:var(--radius-lg); padding:var(--space-6); border-left:4px solid var(--color-secondary); box-shadow:var(--shadow-sm);">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:var(--space-2);">
+                  <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold);">UI/UX Design Fundamentals</h3>
+                  <span class="tag" style="white-space:nowrap;">2023</span>
+                </div>
+                <p style="color:var(--color-secondary); font-size:var(--fs-sm); font-weight:var(--fw-medium); margin-bottom:var(--space-2);">Google / Coursera</p>
+                <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">Learned user-centered design principles, wireframing, prototyping, and building accessible interfaces.</p>
+              </div>
+
+              <div style="background:var(--color-bg-alt); border-radius:var(--radius-lg); padding:var(--space-6); border-left:4px solid var(--color-accent); box-shadow:var(--shadow-sm);">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:var(--space-2);">
+                  <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold);">Freelance Web Projects</h3>
+                  <span class="tag" style="white-space:nowrap;">2024–Now</span>
+                </div>
+                <p style="color:var(--color-accent); font-size:var(--fs-sm); font-weight:var(--fw-medium); margin-bottom:var(--space-2);">Self-Employed</p>
+                <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">Designed and developed landing pages, portfolio sites, and UI components for various personal and client projects.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VALUES ===== -->
+    <section class="section" style="background:var(--color-bg-alt);" aria-label="Values">
+      <div class="container" style="text-align:center;">
+        <span class="tag">What Drives Me</span>
+        <h2 class="section-title" style="margin:var(--space-4) auto var(--space-4);">My Core <span>Values</span></h2>
+        <p class="section-subtitle" style="margin:0 auto var(--space-12);">The principles that guide my work and growth every single day.</p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:var(--space-6);">
+          <div style="background:var(--color-bg); border-radius:var(--radius-xl); padding:var(--space-8); border:1px solid var(--color-border); transition:all var(--transition-base);" onmouseover="this.style.boxShadow='var(--shadow-lg)'; this.style.transform='translateY(-6px)'" onmouseout="this.style.boxShadow=''; this.style.transform=''">
+            <div style="font-size:3rem; margin-bottom:var(--space-4);">🎯</div>
+            <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold); margin-bottom:var(--space-3);">Precision</h3>
+            <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">Every detail matters — from pixel-perfect layouts to clean, readable code structure.</p>
+          </div>
+          <div style="background:var(--color-bg); border-radius:var(--radius-xl); padding:var(--space-8); border:1px solid var(--color-border); transition:all var(--transition-base);" onmouseover="this.style.boxShadow='var(--shadow-lg)'; this.style.transform='translateY(-6px)'" onmouseout="this.style.boxShadow=''; this.style.transform=''">
+            <div style="font-size:3rem; margin-bottom:var(--space-4);">🚀</div>
+            <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold); margin-bottom:var(--space-3);">Growth Mindset</h3>
+            <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">I embrace challenges as opportunities to learn and constantly push my boundaries.</p>
+          </div>
+          <div style="background:var(--color-bg); border-radius:var(--radius-xl); padding:var(--space-8); border:1px solid var(--color-border); transition:all var(--transition-base);" onmouseover="this.style.boxShadow='var(--shadow-lg)'; this.style.transform='translateY(-6px)'" onmouseout="this.style.boxShadow=''; this.style.transform=''">
+            <div style="font-size:3rem; margin-bottom:var(--space-4);">💡</div>
+            <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold); margin-bottom:var(--space-3);">Innovation</h3>
+            <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">I combine creativity with logic to build solutions that are both smart and visually compelling.</p>
+          </div>
+          <div style="background:var(--color-bg); border-radius:var(--radius-xl); padding:var(--space-8); border:1px solid var(--color-border); transition:all var(--transition-base);" onmouseover="this.style.boxShadow='var(--shadow-lg)'; this.style.transform='translateY(-6px)'" onmouseout="this.style.boxShadow=''; this.style.transform=''">
+            <div style="font-size:3rem; margin-bottom:var(--space-4);">🤝</div>
+            <h3 style="font-size:var(--fs-md); font-weight:var(--fw-semibold); margin-bottom:var(--space-3);">Collaboration</h3>
+            <p style="color:var(--color-text-muted); font-size:var(--fs-sm); line-height:1.7;">I thrive in team environments and believe the best results come from working together.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__brand">
+        <div class="footer__logo">VinayGK.</div>
+        <p>Building clean, responsive web experiences with modern HTML, CSS, and JavaScript.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="GitHub">🐙</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Email">✉️</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Skills</h4>
+        <ul class="footer__links">
+          <li><a href="#">HTML5 & CSS3</a></li>
+          <li><a href="#">Flexbox & Grid</a></li>
+          <li><a href="#">Responsive Design</a></li>
+          <li><a href="#">JavaScript</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Vinay GK. Crafted with ❤️ using HTML & CSS.</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
