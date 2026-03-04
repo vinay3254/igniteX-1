@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery</title>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <h1 class="site-title">📸 Image Gallery</h1>
+    <p class="site-subtitle">Click any photo to explore it in full view</p>
+
+    <!-- Filter buttons -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+      <button class="filter-btn" data-filter="city">City</button>
+      <button class="filter-btn" data-filter="animals">Animals</button>
+      <button class="filter-btn" data-filter="architecture">Architecture</button>
+    </div>
+  </header>
+
+  <!-- ===== GALLERY GRID ===== -->
+  <main class="gallery-container" id="gallery">
+
+    <!-- Image Card 1 -->
+    <div class="gallery-item" data-category="nature" data-index="0">
+      <img
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600"
+        alt="Mountain lake at sunrise"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Mountain Lake</p>
+      </div>
+    </div>
+
+    <!-- Image Card 2 -->
+    <div class="gallery-item" data-category="city" data-index="1">
+      <img
+        src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600"
+        alt="City skyline at night"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">City Skyline</p>
+      </div>
+    </div>
+
+    <!-- Image Card 3 -->
+    <div class="gallery-item" data-category="animals" data-index="2">
+      <img
+        src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600"
+        alt="Fox in the wild"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Wild Fox</p>
+      </div>
+    </div>
+
+    <!-- Image Card 4 -->
+    <div class="gallery-item" data-category="architecture" data-index="3">
+      <img
+        src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=600"
+        alt="Modern architecture bridge"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Modern Bridge</p>
+      </div>
+    </div>
+
+    <!-- Image Card 5 -->
+    <div class="gallery-item" data-category="nature" data-index="4">
+      <img
+        src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600"
+        alt="Green forest aerial view"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Forest Aerial</p>
+      </div>
+    </div>
+
+    <!-- Image Card 6 -->
+    <div class="gallery-item" data-category="city" data-index="5">
+      <img
+        src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600"
+        alt="Busy city street"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Busy Street</p>
+      </div>
+    </div>
+
+    <!-- Image Card 7 -->
+    <div class="gallery-item" data-category="animals" data-index="6">
+      <img
+        src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=600"
+        alt="Sea turtle swimming"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Sea Turtle</p>
+      </div>
+    </div>
+
+    <!-- Image Card 8 -->
+    <div class="gallery-item" data-category="architecture" data-index="7">
+      <img
+        src="https://images.unsplash.com/photo-1490642914619-7955a3fd483c?w=600"
+        alt="Colosseum Rome"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Colosseum</p>
+      </div>
+    </div>
+
+    <!-- Image Card 9 -->
+    <div class="gallery-item" data-category="nature" data-index="8">
+      <img
+        src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600"
+        alt="Wildflower field"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Wildflowers</p>
+      </div>
+    </div>
+
+    <!-- Image Card 10 -->
+    <div class="gallery-item" data-category="city" data-index="9">
+      <img
+        src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=600"
+        alt="Tokyo at night"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Tokyo Night</p>
+      </div>
+    </div>
+
+    <!-- Image Card 11 -->
+    <div class="gallery-item" data-category="animals" data-index="10">
+      <img
+        src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=600"
+        alt="Lion portrait"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Lion Portrait</p>
+      </div>
+    </div>
+
+    <!-- Image Card 12 -->
+    <div class="gallery-item" data-category="architecture" data-index="11">
+      <img
+        src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=600"
+        alt="Eiffel Tower Paris"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Eiffel Tower</p>
+      </div>
+    </div>
+
+    <!-- Image Card 13 -->
+    <div class="gallery-item" data-category="nature" data-index="12">
+      <img
+        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600"
+        alt="Snowy mountain peak"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Snowy Peak</p>
+      </div>
+    </div>
+
+    <!-- Image Card 14 -->
+    <div class="gallery-item" data-category="animals" data-index="13">
+      <img
+        src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=600"
+        alt="Colorful parrot"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Colorful Parrot</p>
+      </div>
+    </div>
+
+    <!-- Image Card 15 -->
+    <div class="gallery-item" data-category="city" data-index="14">
+      <img
+        src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600"
+        alt="New York Times Square"
+        loading="lazy"
+      />
+      <div class="overlay">
+        <span class="overlay-icon"><i class="fas fa-expand-alt"></i></span>
+        <p class="overlay-caption">Times Square</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== LIGHTBOX MODAL ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+
+    <!-- Close button -->
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Previous button -->
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Lightbox image wrapper -->
+    <div class="lightbox-content">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+      <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
+
+    <!-- Next button -->
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+  </div>
+
+  <!-- Dark overlay backdrop for lightbox -->
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+
+  <!-- Main JavaScript -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

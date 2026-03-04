@@ -1,0 +1,375 @@
+/* ============================================================
+   RESPONSIVE IMAGE GALLERY — style.css
+   Sections:
+   1. CSS Variables & Reset
+   2. Header & Filter Bar
+   3. Gallery Grid
+   4. Gallery Item & Hover Effect
+   5. Lightbox Modal
+   6. Lightbox Navigation
+   7. Responsive Breakpoints
+   ============================================================ */
+
+
+/* ── 1. CSS Variables & Reset ──────────────────────────────── */
+:root {
+  --bg: #0f0f0f;
+  --surface: #1a1a1a;
+  --accent: #6c63ff;
+  --accent-hover: #857cff;
+  --text: #f0f0f0;
+  --muted: #888;
+  --white: #ffffff;
+  --radius: 12px;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+
+/* ── 2. Header & Filter Bar ────────────────────────────────── */
+.site-header {
+  text-align: center;
+  padding: 56px 24px 32px;
+  background: linear-gradient(180deg, #1a1040 0%, var(--bg) 100%);
+}
+
+.site-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.site-subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 32px;
+}
+
+/* Filter Buttons */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid #2e2e2e;
+  padding: 8px 22px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+
+/* ── 3. Gallery Grid ───────────────────────────────────────── */
+.gallery-container {
+  display: grid;
+  /* Auto-fill columns, minimum 250px wide */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 40px 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* ── 4. Gallery Item & Hover Effect ────────────────────────── */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  cursor: pointer;
+  background: var(--surface);
+
+  /* Smooth show-in animation */
+  animation: fadeIn 0.5s ease both;
+}
+
+/* Fade-in keyframe */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gallery image */
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+/* Zoom-in on hover */
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Dark overlay with caption */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(108, 99, 255, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-icon {
+  font-size: 2rem;
+  color: var(--white);
+  line-height: 1;
+}
+
+.overlay-caption {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Hidden items (filtered out) */
+.gallery-item.hidden {
+  display: none;
+}
+
+
+/* ── 5. Lightbox Modal ─────────────────────────────────────── */
+
+/* Dark full-screen backdrop */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Lightbox modal container */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* The centered image box */
+.lightbox-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  max-width: 85vw;
+  max-height: 90vh;
+}
+
+/* Lightbox image — zoom-in animation when opening */
+.lightbox-img {
+  max-width: 80vw;
+  max-height: 75vh;
+  border-radius: var(--radius);
+  object-fit: contain;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
+
+  /* Entry animation */
+  transform: scale(0.85);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity 0.3s ease;
+  opacity: 0;
+}
+
+.lightbox.active .lightbox-img {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Image caption */
+.lightbox-caption {
+  font-size: 1.05rem;
+  color: var(--white);
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Counter text (e.g. 3 / 15) */
+.lightbox-counter {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Close button — top-right corner */
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: var(--white);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), transform var(--transition);
+  z-index: 1100;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(90deg);
+}
+
+
+/* ── 6. Lightbox Navigation ────────────────────────────────── */
+.lightbox-nav {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--white);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.lightbox-nav:hover {
+  background: var(--accent);
+  transform: scale(1.1);
+}
+
+.lightbox-nav:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* ── 7. Responsive Breakpoints ─────────────────────────────── */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 32px 24px;
+    gap: 12px;
+  }
+}
+
+/* Large mobile */
+@media (max-width: 600px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px 16px;
+    gap: 10px;
+  }
+
+  .gallery-item img {
+    height: 160px;
+  }
+
+  .lightbox-img {
+    max-width: 95vw;
+    max-height: 65vh;
+  }
+
+  .lightbox-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item img {
+    height: 220px;
+  }
+}

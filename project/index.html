@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix Homepage Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="nav-left">
+      <img src="images/logo.svg" alt="Netflix" class="logo" />
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" href="#">TV Shows</a>
+        <a class="nav-link" href="#">Movies</a>
+        <a class="nav-link" href="#">My List</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <button class="icon-button" aria-label="Search"><i class="fas fa-search"></i></button>
+      <button class="icon-button" aria-label="Notifications"><i class="fas fa-bell"></i></button>
+      <div class="profile-pill">
+        <span>Guest</span>
+        <i class="fas fa-caret-down"></i>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label">NETFLIX ORIGINAL</p>
+      <h1 class="hero-title" id="heroTitle">Loading...</h1>
+      <p class="hero-description" id="heroDescription">Fetching featured movie overview.</p>
+      <div class="hero-buttons">
+        <button class="btn btn-play"><i class="fas fa-play"></i> Play</button>
+        <button class="btn btn-info"><i class="fas fa-circle-info"></i> More Info</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+    <section class="row-section">
+      <div class="row-header">
+        <h2>Trending Now</h2>
+        <div class="row-actions">
+          <button class="row-arrow" data-direction="left"><i class="fas fa-chevron-left"></i></button>
+          <button class="row-arrow" data-direction="right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="row-track" id="trending"></div>
+    </section>
+
+    <section class="row-section">
+      <div class="row-header">
+        <h2>Popular on Netflix</h2>
+        <div class="row-actions">
+          <button class="row-arrow" data-direction="left"><i class="fas fa-chevron-left"></i></button>
+          <button class="row-arrow" data-direction="right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="row-track" id="popular"></div>
+    </section>
+
+    <section class="row-section">
+      <div class="row-header">
+        <h2>Top Rated</h2>
+        <div class="row-actions">
+          <button class="row-arrow" data-direction="left"><i class="fas fa-chevron-left"></i></button>
+          <button class="row-arrow" data-direction="right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="row-track" id="topRated"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Netflix Homepage Clone · Built with TMDB API</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
