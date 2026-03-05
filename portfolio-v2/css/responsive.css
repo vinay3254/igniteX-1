@@ -1,0 +1,121 @@
+/* ================================================================
+   VINAY GK — PORTFOLIO V2  |  responsive.css
+   tablet ≤ 900px  |  mobile ≤ 600px
+   ================================================================ */
+
+/* ── TABLET (≤ 900px) ─────────────────────────────────────── */
+@media (max-width: 900px) {
+
+  /* Header / Nav */
+  .nav-toggle { display: flex; }
+
+  #primaryNav {
+    position: fixed;
+    inset: 68px 0 0 auto;
+    width: min(300px, 80vw);
+    height: calc(100dvh - 68px);
+    background: var(--white);
+    border-left: 1px solid var(--border);
+    transform: translateX(100%);
+    transition: transform var(--ease-slow);
+    z-index: 99;
+    overflow-y: auto;
+  }
+  #primaryNav.open { transform: translateX(0); }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--s6) var(--s4);
+    gap: var(--s4);
+  }
+  .nav-link { font-size: var(--fs-lg); }
+
+  /* Hero */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: var(--s6);
+  }
+  .hero-aside {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--s4);
+    order: -1;
+  }
+  .hero-stats {
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--s3);
+  }
+  .hero-stat {
+    flex-direction: column;
+    gap: var(--s1);
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+    padding-right: var(--s3);
+    padding-bottom: 0;
+  }
+  .hero-stat:last-child { border-right: none; }
+
+  /* Timeline */
+  .timeline::before { left: 20px; }
+  .timeline-item { grid-template-columns: 44px 1fr; }
+  .timeline-marker { width: 44px; height: 44px; font-size: var(--fs-xs); }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .skill-group--currently { grid-column: 1 / -1; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Contact */
+  .contact-layout { grid-template-columns: 1fr; gap: var(--s5); }
+}
+
+/* ── MOBILE (≤ 600px) ─────────────────────────────────────── */
+@media (max-width: 600px) {
+
+  /* Nav */
+  #primaryNav { width: 100%; border-left: none; }
+
+  /* Hero */
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .hero-aside   { flex-direction: column; }
+  .hero-stats   { flex-direction: column; }
+  .hero-stat    { border-right: none; border-bottom: 1px solid var(--border); padding-bottom: var(--s2); flex-direction: row; justify-content: space-between; }
+  .hero-stat:last-child { border-bottom: none; }
+
+  /* Skills */
+  .skills-grid  { grid-template-columns: 1fr; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* Contact form */
+  .field-row    { grid-template-columns: 1fr; }
+  .contact-form { padding: var(--s3); }
+
+  /* Footer */
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: var(--s2); }
+}
+
+/* ── REDUCED MOTION ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; translate: 0 0; }
+}
+
+/* ── PRINT ────────────────────────────────────────────────── */
+@media print {
+  .site-header, .back-top, .nav-toggle, .hero-rule { display: none; }
+  .hero { padding-top: var(--s4); }
+  body { background: #fff; }
+  .project-card, .skill-group { break-inside: avoid; }
+}

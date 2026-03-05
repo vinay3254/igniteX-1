@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vinay GK — Front-End Developer. Learning in public, building from scratch." />
+  <title>Vinay GK</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+
+      <a href="#home" class="logo" aria-label="Vinay GK — home">
+        Vinay<em>GK</em>
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="primaryNav"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="primaryNav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#home"     class="nav-link">Home</a></li>
+          <li><a href="#journey"  class="nav-link">Journey</a></li>
+          <li><a href="#skills"   class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact"  class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════ -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+
+        <div class="hero-text reveal">
+          <span class="eyebrow">Front-End Developer · India</span>
+          <h1>Hi, I'm<br /><strong>Vinay GK.</strong></h1>
+          <p class="hero-lead">
+            I learn in public and build from scratch — turning
+            HTML, CSS &amp; JavaScript into interfaces that
+            actually work for people.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">See My Work</a>
+            <a href="#contact"  class="btn btn-text">Say Hello →</a>
+          </div>
+        </div>
+
+        <aside class="hero-aside reveal reveal--delay">
+          <div class="hero-monogram" aria-hidden="true">VGK</div>
+          <dl class="hero-stats">
+            <div class="hero-stat">
+              <dt>Projects Built</dt>
+              <dd>5+</dd>
+            </div>
+            <div class="hero-stat">
+              <dt>Experience</dt>
+              <dd>3 months </dd>
+            </div>
+            <div class="hero-stat">
+              <dt>Status</dt>
+              <dd class="available">Open to Work</dd>
+            </div>
+          </dl>
+        </aside>
+
+      </div>
+
+      <div class="hero-rule" aria-hidden="true"></div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         LEARNING JOURNEY
+    ══════════════════════════════════════════ -->
+    <section class="journey section" id="journey">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="eyebrow">How I Got Here</span>
+          <h2>My Learning Journey</h2>
+          <p class="section-lead">
+            Every project taught me something new. Here's how the skills stacked up.
+          </p>
+        </header>
+
+        <ol class="timeline">
+
+          <li class="timeline-item reveal">
+            <div class="timeline-marker">01</div>
+            <div class="timeline-body">
+              <span class="timeline-date">Start</span>
+              <h3>HTML &amp; Semantic Structure</h3>
+              <p>
+                Learned how the web is built — elements, attributes, forms,
+                tables and the importance of semantic markup for accessibility and SEO.
+              </p>
+              <ul class="timeline-tags">
+                <li>Semantic HTML5</li>
+                <li>Forms &amp; Tables</li>
+                <li>Accessibility (ARIA)</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-marker">02</div>
+            <div class="timeline-body">
+              <span class="timeline-date">Next</span>
+              <h3>CSS &amp; Responsive Design</h3>
+              <p>
+                Moved from inline styles to organized stylesheets. Mastered the
+                box model, Flexbox, CSS Grid, and media queries to make layouts
+                that adapt to any screen.
+              </p>
+              <ul class="timeline-tags">
+                <li>Flexbox</li>
+                <li>CSS Grid</li>
+                <li>Media Queries</li>
+                <li>CSS Variables</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-marker">03</div>
+            <div class="timeline-body">
+              <span class="timeline-date">Then</span>
+              <h3>JavaScript &amp; Interactivity</h3>
+              <p>
+                Brought pages to life with DOM manipulation, event handling,
+                fetch API calls, and ES6+ features like arrow functions,
+                destructuring, and async/await.
+              </p>
+              <ul class="timeline-tags">
+                <li>DOM API</li>
+                <li>Fetch / REST APIs</li>
+                <li>ES6+</li>
+                <li>IntersectionObserver</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-marker">04</div>
+            <div class="timeline-body">
+              <span class="timeline-date">Also</span>
+              <h3>Python &amp; NLP</h3>
+              <p>
+                Explored back-end scripting and natural language processing —
+                built a chatbot that understands and responds to user queries
+                using Python NLP libraries.
+              </p>
+              <ul class="timeline-tags">
+                <li>Python</li>
+                <li>NLP</li>
+                <li>NLTK / spaCy</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-marker">05</div>
+            <div class="timeline-body">
+              <span class="timeline-date">Now</span>
+              <h3>Tools &amp; Workflow</h3>
+              <p>
+                Adopted professional workflows — Git version control,
+                VS Code extensions, browser DevTools debugging, and
+                deploying projects to the web.
+              </p>
+              <ul class="timeline-tags">
+                <li>Git &amp; GitHub</li>
+                <li>VS Code</li>
+                <li>DevTools</li>
+                <li>Deployment</li>
+              </ul>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SKILLS
+    ══════════════════════════════════════════ -->
+    <section class="skills section section-tint" id="skills">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="eyebrow">What I Can Do</span>
+          <h2>Skills &amp; Technologies</h2>
+        </header>
+
+        <div class="skills-grid">
+
+          <article class="skill-group reveal">
+            <h3 class="skill-group-title">
+              <span class="skill-group-icon" aria-hidden="true">&#60;&#47;&#62;</span>
+              Frontend
+            </h3>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">HTML5</span>
+                <span class="skill-bar-wrap" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 proficiency 95%">
+                  <span class="skill-bar-fill" style="--w:95%"></span>
+                </span>
+                <span class="skill-pct">95%</span>
+              </li>
+              <li>
+                <span class="skill-name">CSS3</span>
+                <span class="skill-bar-wrap" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 proficiency 90%">
+                  <span class="skill-bar-fill" style="--w:90%"></span>
+                </span>
+                <span class="skill-pct">90%</span>
+              </li>
+              <li>
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-bar-wrap" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency 78%">
+                  <span class="skill-bar-fill" style="--w:78%"></span>
+                </span>
+                <span class="skill-pct">78%</span>
+              </li>
+              <li>
+                <span class="skill-name">Responsive Design</span>
+                <span class="skill-bar-wrap" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive Design 88%">
+                  <span class="skill-bar-fill" style="--w:88%"></span>
+                </span>
+                <span class="skill-pct">88%</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3 class="skill-group-title">
+              <span class="skill-group-icon" aria-hidden="true">⚙</span>
+              Tools &amp; Other
+            </h3>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">Git &amp; GitHub</span>
+                <span class="skill-bar-wrap" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Git 82%">
+                  <span class="skill-bar-fill" style="--w:82%"></span>
+                </span>
+                <span class="skill-pct">82%</span>
+              </li>
+              <li>
+                <span class="skill-name">Python</span>
+                <span class="skill-bar-wrap" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Python 65%">
+                  <span class="skill-bar-fill" style="--w:65%"></span>
+                </span>
+                <span class="skill-pct">65%</span>
+              </li>
+              <li>
+                <span class="skill-name">Figma / UI Design</span>
+                <span class="skill-bar-wrap" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Figma 70%">
+                  <span class="skill-bar-fill" style="--w:70%"></span>
+                </span>
+                <span class="skill-pct">70%</span>
+              </li>
+              <li>
+                <span class="skill-name">C Programming</span>
+                <span class="skill-bar-wrap" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="C Programming 72%">
+                  <span class="skill-bar-fill" style="--w:72%"></span>
+                </span>
+                <span class="skill-pct">72%</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="skill-group skill-group--currently reveal">
+            <h3 class="skill-group-title">
+              <span class="skill-group-icon" aria-hidden="true">→</span>
+              Currently Learning
+            </h3>
+            <ul class="learning-list">
+              <li>React.js</li>
+              <li>Node.js &amp; Express</li>
+              <li>REST API Design</li>
+              <li>Accessibility (WCAG)</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         PROJECTS
+    ══════════════════════════════════════════ -->
+    <section class="projects section" id="projects">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="eyebrow">Things I've Built</span>
+          <h2>Projects</h2>
+          <p class="section-lead">
+            Each project here is something I built to practise a concept —
+            not a tutorial copy, but my own take on it.
+          </p>
+        </header>
+
+        <div class="projects-grid">
+
+          <!-- Weather App -->
+          <article class="project-card reveal">
+            <div class="project-card-header">
+              <span class="project-num">01</span>
+              <div class="project-links">
+                <a href="#" class="icon-link" aria-label="Live demo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Source code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Weather App</h3>
+            <p>
+              Real-time weather data from the OpenWeather API. I learned how to
+              handle fetch requests, parse JSON, and update the DOM dynamically
+              based on user input.
+            </p>
+            <footer class="project-card-footer">
+              <ul class="tech-tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Fetch API</li>
+              </ul>
+            </footer>
+          </article>
+
+          <!-- Image Gallery -->
+          <article class="project-card reveal">
+            <div class="project-card-header">
+              <span class="project-num">02</span>
+              <div class="project-links">
+                <a href="#" class="icon-link" aria-label="Live demo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Source code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Image Gallery</h3>
+            <p>
+              A responsive masonry gallery with a lightbox. Practised CSS Grid,
+              event delegation, and how to manage state for an overlay
+              without any library.
+            </p>
+            <footer class="project-card-footer">
+              <ul class="tech-tags">
+                <li>CSS Grid</li><li>JavaScript</li><li>DOM Events</li>
+              </ul>
+            </footer>
+          </article>
+
+          <!-- Netflix Clone -->
+          <article class="project-card reveal">
+            <div class="project-card-header">
+              <span class="project-num">03</span>
+              <div class="project-links">
+                <a href="#" class="icon-link" aria-label="Live demo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Source code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Netflix Clone</h3>
+            <p>
+              A static clone to push my CSS further — multi-row horizontal
+              scroll sections, hover effects, and pixel-precision layout
+              with Flexbox and Grid together.
+            </p>
+            <footer class="project-card-footer">
+              <ul class="tech-tags">
+                <li>HTML</li><li>Flexbox</li><li>CSS Grid</li><li>CSS Transitions</li>
+              </ul>
+            </footer>
+          </article>
+
+          <!-- NLP Chatbot -->
+          <article class="project-card reveal">
+            <div class="project-card-header">
+              <span class="project-num">04</span>
+              <div class="project-links">
+                <a href="#" class="icon-link" aria-label="Live demo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Source code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>NLP Chatbot</h3>
+            <p>
+              A Python chatbot with a custom HTML/CSS chat interface. My first
+              proper back-end project — bridged Python NLP with a browser UI
+              I built from scratch.
+            </p>
+            <footer class="project-card-footer">
+              <ul class="tech-tags">
+                <li>Python</li><li>NLP</li><li>HTML/CSS</li><li>JavaScript</li>
+              </ul>
+            </footer>
+          </article>
+
+          <!-- WonderCast -->
+          <article class="project-card reveal">
+            <div class="project-card-header">
+              <span class="project-num">05</span>
+              <div class="project-links">
+                <a href="#" class="icon-link" aria-label="Live demo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Source code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>WonderCast</h3>
+            <p>
+              A podcast discovery UI — custom card layouts, dark/light toggle,
+              and careful typography pairing. Focused on spacing, hierarchy
+              and readability.
+            </p>
+            <footer class="project-card-footer">
+              <ul class="tech-tags">
+                <li>HTML</li><li>CSS</li><li>Typography</li>
+              </ul>
+            </footer>
+          </article>
+
+          <!-- C Programs -->
+          <article class="project-card reveal">
+            <div class="project-card-header">
+              <span class="project-num">06</span>
+              <div class="project-links">
+                <a href="#" class="icon-link" aria-label="Source code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Data Structures in C</h3>
+            <p>
+              Implemented queues, trees, and string algorithms in C —
+              strengthened my understanding of memory, pointers, and
+              how computers actually handle data.
+            </p>
+            <footer class="project-card-footer">
+              <ul class="tech-tags">
+                <li>C</li><li>Data Structures</li><li>Algorithms</li>
+              </ul>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CONTACT
+    ══════════════════════════════════════════ -->
+    <section class="contact section section-tint" id="contact">
+      <div class="container contact-inner">
+
+        <header class="section-header reveal">
+          <span class="eyebrow">Get In Touch</span>
+          <h2>Let's Talk</h2>
+          <p class="section-lead">
+            I'm currently open to internships, freelance projects,
+            and collaborations. Drop me a message.
+          </p>
+        </header>
+
+        <div class="contact-layout">
+
+          <div class="contact-info reveal">
+            <ul class="contact-details">
+              <li>
+                <span class="contact-icon" aria-hidden="true">✉</span>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:vinay@example.com">vinay@example.com</a>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon" aria-hidden="true">⌖</span>
+                <div>
+                  <strong>Location</strong>
+                  <span>India — Available Remote</span>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon" aria-hidden="true">◎</span>
+                <div>
+                  <strong>Response</strong>
+                  <span>Within 24 hours</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-socials">
+              <a href="#" class="social-pill" aria-label="GitHub profile">GitHub</a>
+              <a href="#" class="social-pill" aria-label="LinkedIn profile">LinkedIn</a>
+              <a href="#" class="social-pill" aria-label="Twitter profile">Twitter</a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal reveal--delay" id="contactForm" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me more..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-success" id="formSuccess" hidden>✓ Message sent — I'll be in touch soon!</p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <p class="footer-copy">
+        &copy; <span id="year"></span> Vinay GK.
+        Built with HTML, CSS &amp; JavaScript — no frameworks, no shortcuts.
+      </p>
+
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#home" class="back-top" id="backTop" aria-label="Back to top">↑</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
