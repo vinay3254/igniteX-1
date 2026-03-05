@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinay — My HTML & CSS Journey</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ===== NAVIGATION ===== -->
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <span class="brand-dot"></span>
+          <span class="brand-name">VinayGK</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#concepts">Concepts</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Say Hello</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===== HERO SECTION ===== -->
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <p class="hero-label">HTML &amp; CSS Foundations</p>
+          <h1 class="hero-title">
+            Building the Web,<br />
+            <em>One Tag at a Time</em>
+          </h1>
+          <p class="hero-subtitle">
+            A personal showcase of everything learned from the SuperSimpleDev
+            HTML &amp; CSS course — from semantic structure to responsive
+            layouts.
+          </p>
+          <div class="hero-actions">
+            <a href="#concepts" class="btn btn-primary">Explore Concepts</a>
+            <a href="#projects" class="btn btn-ghost">See Projects</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="code-card">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-filename">index.html</span>
+            </div>
+            <pre class="code-body"><code><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="val">"en"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span><span class="text">My Page</span><span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span><span class="text">Hello, World!</span><span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;p&gt;</span><span class="text">Learning HTML &amp; CSS</span><span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT SECTION ===== -->
+      <section class="about section" id="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-text">
+              <span class="section-label">About This Project</span>
+              <h2>What I Learned &amp; Why It Matters</h2>
+              <p>
+                This project is built entirely from scratch using the core
+                concepts taught in the SuperSimpleDev HTML &amp; CSS course.
+                Every layout, colour choice, and interaction reflects real
+                skills — no templates, no shortcuts.
+              </p>
+              <p>
+                From understanding how the browser renders a page, to crafting
+                responsive layouts with Flexbox and Grid, this page is my proof
+                of learning in action.
+              </p>
+              <ul class="check-list">
+                <li>Semantic HTML5 structure</li>
+                <li>CSS Box Model mastery</li>
+                <li>Flexbox &amp; Grid layouts</li>
+                <li>Responsive design with media queries</li>
+                <li>Typography &amp; colour systems</li>
+              </ul>
+            </div>
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-number">12+</span>
+                <span class="stat-label">Concepts Covered</span>
+              </div>
+              <div class="stat-card accent">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Mini Projects Built</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Hand-Coded</span>
+              </div>
+              <div class="stat-card soft">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Frameworks Used</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONCEPTS SECTION ===== -->
+      <section class="concepts section" id="concepts">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Core Concepts</span>
+            <h2>What I've Learned So Far</h2>
+            <p>
+              Key concepts from the course, applied directly in this very page
+              you're reading right now.
+            </p>
+          </div>
+
+          <div class="concepts-grid">
+            <article class="concept-card">
+              <div class="concept-icon">🏗️</div>
+              <h3>Semantic HTML</h3>
+              <p>
+                Using meaningful tags like
+                <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+                <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>,
+                <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code>
+                to give structure and meaning to web content.
+              </p>
+              <div class="concept-tags">
+                <span class="tag-chip">Structure</span>
+                <span class="tag-chip">Accessibility</span>
+              </div>
+            </article>
+
+            <article class="concept-card">
+              <div class="concept-icon">📦</div>
+              <h3>The Box Model</h3>
+              <p>
+                Every element is a box. Understanding
+                <strong>content</strong>, <strong>padding</strong>,
+                <strong>border</strong>, and <strong>margin</strong> is
+                fundamental to controlling layout and spacing on any page.
+              </p>
+              <div class="concept-tags">
+                <span class="tag-chip">Layout</span>
+                <span class="tag-chip">Spacing</span>
+              </div>
+            </article>
+
+            <article class="concept-card highlight-card">
+              <div class="concept-icon">↔️</div>
+              <h3>Flexbox</h3>
+              <p>
+                The one-dimensional layout tool. Used throughout this page for
+                navbars, card rows, and aligning items — with properties like
+                <code>justify-content</code>, <code>align-items</code>, and
+                <code>flex-wrap</code>.
+              </p>
+              <div class="concept-tags">
+                <span class="tag-chip">Flexbox</span>
+                <span class="tag-chip">Alignment</span>
+              </div>
+            </article>
+
+            <article class="concept-card">
+              <div class="concept-icon">⊞</div>
+              <h3>CSS Grid</h3>
+              <p>
+                Two-dimensional layouts made easy. The concepts and stats
+                sections on this page are built with Grid — using
+                <code>grid-template-columns</code> and
+                <code>gap</code> for clean, structured designs.
+              </p>
+              <div class="concept-tags">
+                <span class="tag-chip">Grid</span>
+                <span class="tag-chip">Layout</span>
+              </div>
+            </article>
+
+            <article class="concept-card">
+              <div class="concept-icon">📱</div>
+              <h3>Responsive Design</h3>
+              <p>
+                Using <strong>media queries</strong> and relative units like
+                <code>rem</code>, <code>%</code>, and <code>vw</code> to ensure
+                the page looks great on phones, tablets, and desktops alike.
+              </p>
+              <div class="concept-tags">
+                <span class="tag-chip">Media Queries</span>
+                <span class="tag-chip">Mobile First</span>
+              </div>
+            </article>
+
+            <article class="concept-card">
+              <div class="concept-icon">🎨</div>
+              <h3>Typography &amp; Colour</h3>
+              <p>
+                Pairing fonts thoughtfully, setting a consistent
+                <strong>colour palette</strong> with CSS custom properties
+                (variables), and using contrast, weight, and size to create
+                clear visual hierarchy.
+              </p>
+              <div class="concept-tags">
+                <span class="tag-chip">CSS Variables</span>
+                <span class="tag-chip">Typography</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== BOX MODEL DEMO ===== -->
+      <section class="demo-section section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Interactive Demo</span>
+            <h2>The CSS Box Model, Visualised</h2>
+            <p>Every HTML element is wrapped in these four layers.</p>
+          </div>
+          <div class="box-model-demo">
+            <div class="bm-margin">
+              <span class="bm-label">Margin</span>
+              <div class="bm-border">
+                <span class="bm-label">Border</span>
+                <div class="bm-padding">
+                  <span class="bm-label">Padding</span>
+                  <div class="bm-content">
+                    <span>Content</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS SECTION ===== -->
+      <section class="projects section" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Mini Projects</span>
+            <h2>Practice Builds from the Course</h2>
+            <p>
+              Small projects created while working through course exercises.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-thumb thumb-blue">
+                <div class="thumb-icon">🛍️</div>
+              </div>
+              <div class="project-info">
+                <h3>Product Landing Page</h3>
+                <p>
+                  A static product page using semantic HTML, flexbox layout,
+                  and hover effects on buttons and images.
+                </p>
+                <div class="project-stack">
+                  <span>HTML5</span><span>CSS3</span><span>Flexbox</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-thumb thumb-peach">
+                <div class="thumb-icon">📰</div>
+              </div>
+              <div class="project-info">
+                <h3>Blog Layout</h3>
+                <p>
+                  A responsive blog template with a sidebar and article cards,
+                  built using CSS Grid and media queries.
+                </p>
+                <div class="project-stack">
+                  <span>HTML5</span><span>CSS Grid</span
+                  ><span>Responsive</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-thumb thumb-mint">
+                <div class="thumb-icon">📋</div>
+              </div>
+              <div class="project-info">
+                <h3>Contact Form</h3>
+                <p>
+                  A styled HTML form with labels, inputs, textarea, and a
+                  submit button — all with clean CSS focus states.
+                </p>
+                <div class="project-stack">
+                  <span>HTML Forms</span><span>CSS</span
+                  ><span>Accessibility</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FLEXBOX VISUAL DEMO ===== -->
+      <section class="flexbox-demo section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Concept Demo</span>
+            <h2>Flexbox in Action</h2>
+            <p>These coloured bars are laid out using Flexbox properties.</p>
+          </div>
+
+          <div class="flex-demos">
+            <div class="flex-example">
+              <p class="flex-label">
+                <code>justify-content: space-between</code>
+              </p>
+              <div class="flex-row jc-space-between">
+                <div class="flex-box b1"></div>
+                <div class="flex-box b2"></div>
+                <div class="flex-box b3"></div>
+                <div class="flex-box b4"></div>
+              </div>
+            </div>
+            <div class="flex-example">
+              <p class="flex-label"><code>justify-content: center</code></p>
+              <div class="flex-row jc-center">
+                <div class="flex-box b1"></div>
+                <div class="flex-box b2"></div>
+                <div class="flex-box b3"></div>
+                <div class="flex-box b4"></div>
+              </div>
+            </div>
+            <div class="flex-example">
+              <p class="flex-label">
+                <code>justify-content: flex-start</code>
+              </p>
+              <div class="flex-row jc-start">
+                <div class="flex-box b1"></div>
+                <div class="flex-box b2"></div>
+                <div class="flex-box b3"></div>
+                <div class="flex-box b4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT SECTION ===== -->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-text">
+              <span class="section-label">Get In Touch</span>
+              <h2>Let's Connect</h2>
+              <p>
+                Have feedback on my project? Want to learn together? Drop me a
+                message and I'll get back to you.
+              </p>
+              <div class="contact-info">
+                <p>Vinaygk219@gmail.com</p>
+                <p>Vinayfrontend.dev</p>
+              </div>
+            </div>
+            <form class="contact-form" action="#" method="post">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="e.g. Alex Johnson"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Tell me what you think..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="nav-brand">
+              <span class="brand-dot"></span>
+              <span class="brand-name">Vinay</span>
+            </div>
+            <p>
+              A learning project built with pure HTML &amp; CSS, inspired by
+              the SuperSimpleDev course.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#concepts">Concepts</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Technologies</h4>
+            <ul>
+              <li><a href="#">HTML5</a></li>
+              <li><a href="#">CSS3</a></li>
+              <li><a href="#">Flexbox</a></li>
+              <li><a href="#">CSS Grid</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            Built with 💛 while learning HTML &amp; CSS ·
+            <a href="https://youtu.be/G3e-cpL7ofc" target="_blank"
+              >Watch the course</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
