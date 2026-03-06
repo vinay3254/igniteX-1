@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vinay</title>
+</head>
+<body>
+    <h1>My website</h1>
+
+    <button onclick="sayHello()">click me</button>
+
+    <script>
+        function sayHello(){
+            alert("Hello Vinay!");
+        }
+    </script>
+
+        <button onclick="changeText()">click me</button>
+
+        <p id="demo">Hello</p>
+
+        <script>
+            function changeText(){
+                document.getElementById("demo").InnerText = "Text Changed!";
+            }
+        </script>
+
+                <script>
+        console.log("Running inside browser");
+        </script>
+            
+            <p id="count">0</p>
+
+        <button onclick="increase()">Click</button>
+
+            <script>
+            let count = 0;
+
+        function increase() {
+        count++;
+        document.getElementById("count").innerText = count;
+
+        }
+
+            </script>
+            <input type="text" id="name">
+
+            <button onclick="showName()">Submit</button>
+
+            <p id="result"></p>
+
+            <script>
+            function showName() {
+            let name = document.getElementById("name").value;
+            document.getElementById("result").innerText = "Hello " + name;
+            }
+
+                            
+                </script>
+                <input type ="number" id="num1">
+                <input type ="number" id="num2">
+
+                <button onclick="add()">Add</button>
+
+                <p id="answer"></p>
+
+        <script>
+            function add(){
+                let a = Number(document.getElementById("num1").value);
+                let b = Number(document.getElementById("num2").value);
+
+                let sum = a+b;
+
+                document.getElementById("answer").innerText = "Result: " + sum;
+            }
+            
+        </script>
+
+    <button onclick="showTime()">Show time</button>
+
+    <p id="time">kyeahh </p>
+
+    <script>
+        function showTime(){
+            let now = new Date();
+            document.getElementById("time").innerText = now;
+
+        }
+        
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
