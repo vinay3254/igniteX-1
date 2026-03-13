@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EtherX — Premium Tech Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="/" class="navbar-brand" data-route="/">
+          <img src="logo.png" class="brand-icon" alt="EtherX" />
+          <span>EtherX</span>
+        </a>
+        <nav class="navbar-nav">
+          <a href="/" class="nav-link" data-route="/">Home</a>
+          <a href="/shop" class="nav-link" data-route="/shop">Shop</a>
+          <a href="/shop?tag=new" class="nav-link" data-route="/shop?tag=new">New Arrivals</a>
+          <a href="/about" class="nav-link" data-route="/about">About</a>
+          <a href="/support" class="nav-link" data-route="/support">Support</a>
+        </nav>
+        <div class="navbar-actions">
+          <!-- Search -->
+          <div class="search-wrap" id="search-wrap">
+            <button class="icon-btn" id="search-toggle" title="Search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+            <div class="search-bar" id="search-bar">
+              <input type="text" id="search-input" placeholder="Search products…" autocomplete="off" />
+              <button class="search-submit" id="search-submit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </button>
+            </div>
+          </div>
+          <!-- Cart -->
+          <button class="icon-btn" title="Cart" id="cart-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-badge" id="cart-count">0</span>
+          </button>
+          <!-- Auth -->
+          <div class="auth-area" id="auth-area">
+            <button class="btn-primary btn-sm" id="login-trigger">Sign In</button>
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="/" class="mobile-link" data-route="/">Home</a>
+      <a href="/shop" class="mobile-link" data-route="/shop">Shop</a>
+      <a href="/shop?tag=new" class="mobile-link" data-route="/shop?tag=new">New Arrivals</a>
+      <a href="/about" class="mobile-link" data-route="/about">About</a>
+      <a href="/support" class="mobile-link" data-route="/support">Support</a>
+    </div>
+
+    <!-- ========== PAGE VIEW (SPA renders here) ========== -->
+    <div id="page-view" style="display:none;"></div>
+
+    <main id="app-root">
+
+      <!-- ========== HERO ========== -->
+      <section id="hero">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            New Collection 2024
+          </div>
+          <h1 class="hero-title">The Future<br /><span>In Your Hands</span></h1>
+          <p class="hero-subtitle">Discover premium tech accessories designed to complement your Apple lifestyle.</p>
+          <div class="hero-btns">
+            <button class="btn-primary">Shop Now</button>
+            <button class="btn-ghost">Explore →</button>
+          </div></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-glow"></div>
+          <div class="hero-main-img">
+            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="iPhone 15 Pro" />
+          </div>
+          <div class="floating-card card-1">
+            <img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=200&q=80" alt="AirPods Pro" />
+            <div class="fc-info">
+              <span>AirPods Pro</span>
+              <strong>₹249</strong>
+            </div>
+          </div>
+          <div class="floating-card card-2">
+            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=200&q=80" alt="Apple Watch" />
+            <div class="fc-info">
+              <span>Apple Watch Ultra</span>
+              <strong>₹799</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== FEATURES ========== -->
+      <section id="features">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon blue-bg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h6>Free Shipping</h6>
+            <p>On orders over ₹50</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon green-bg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h6>2-Year Warranty</h6>
+            <p>Full coverage included</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon orange-bg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF9500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+            </div>
+            <h6>Easy Returns</h6>
+            <p>30-day hassle-free</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon purple-bg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5856D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 10a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h6>24/7 Support</h6>
+            <p>Expert help anytime</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CATEGORIES ========== -->
+      <section id="categories" class="section-pad">
+        <div class="section-header">
+          <div>
+            <p class="section-label">Browse By</p>
+            <h2 class="section-title">Categories</h2>
+          </div>
+          <a href="/shop" class="view-all" data-route="/shop">View All →</a>
+        </div>
+        <div class="category-pills">
+          <div class="cat-pill active" data-filter="all">All</div>
+          <div class="cat-pill" data-filter="audio">Audio</div>
+          <div class="cat-pill" data-filter="wearables">Wearables</div>
+          <div class="cat-pill" data-filter="cases">Cases</div>
+          <div class="cat-pill" data-filter="chargers">Chargers</div>
+          <div class="cat-pill" data-filter="displays">Displays</div>
+          <div class="cat-pill" data-filter="keyboards">Keyboards</div>
+        </div>
+        <div class="categories-grid">
+          <div class="cat-card" style="--cat-color: #007AFF;" data-route="/shop?category=audio">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&q=80" alt="Audio" />
+            </div>
+            <div class="cat-info">
+              <h5>Audio</h5>
+              <p>48 items</p>
+            </div>
+          </div>
+          <div class="cat-card" style="--cat-color: #5856D6;" data-route="/shop?category=wearables">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1617043786394-f977fa12eddf?w=300&q=80" alt="Wearables" />
+            </div>
+            <div class="cat-info">
+              <h5>Wearables</h5>
+              <p>32 items</p>
+            </div>
+          </div>
+          <div class="cat-card" style="--cat-color: #FF9500;" data-route="/shop?category=cases">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=300&q=80" alt="Cases" />
+            </div>
+            <div class="cat-info">
+              <h5>Cases</h5>
+              <p>96 items</p>
+            </div>
+          </div>
+          <div class="cat-card" style="--cat-color: #34C759;" data-route="/shop?category=chargers">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=300&q=80" alt="Chargers" />
+            </div>
+            <div class="cat-info">
+              <h5>Chargers</h5>
+              <p>24 items</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== FEATURED PRODUCTS ========== -->
+      <section id="featured" class="section-pad">
+        <div class="section-header">
+          <div>
+            <p class="section-label">Hand Picked</p>
+            <h2 class="section-title">Featured Products</h2>
+          </div>
+          <a href="/shop" class="view-all" data-route="/shop">View All →</a>
+        </div>
+        <div class="products-grid" id="featured-grid"></div>
+      </section>
+
+      <!-- ========== SALE BANNER ========== -->
+      <section id="sale-banner">
+        <div class="banner-inner">
+          <div class="banner-text">
+            <span class="banner-badge">Limited Time</span>
+            <h2>Summer Sale</h2>
+            <p>Up to 40% off on selected accessories. No code needed.</p>
+            <button class="btn-primary" data-route="/shop?tag=sale">Shop the Sale</button>
+          </div>
+          <div class="banner-visual">
+            <img src="https://images.unsplash.com/photo-1512054502232-10a0a035d672?w=500&q=80" alt="Sale items" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== NEW ARRIVALS ========== -->
+      <section id="new-arrivals" class="section-pad">
+        <div class="section-header">
+          <div>
+            <p class="section-label">Just Dropped</p>
+            <h2 class="section-title">New Arrivals</h2>
+          </div>
+          <a href="/shop?tag=new" class="view-all" data-route="/shop?tag=new">View All →</a>
+        </div>
+        <div class="products-grid" id="arrivals-grid"></div>
+      </section>
+
+      <!-- ========== PROMO STRIPS ========== -->
+      <section id="promos" class="section-pad">
+        <div class="promos-grid">
+          <div class="promo-card promo-dark">
+            <span class="promo-eyebrow">Crazy Deal</span>
+            <h3>Buy 1<br />Get 1 Free</h3>
+            <p>Select cases &amp; bands only</p>
+            <button class="btn-outline-white" data-route="/shop?category=cases">Learn More</button>
+          </div>
+          <div class="promo-card promo-blue">
+            <span class="promo-eyebrow">Spring / Summer</span>
+            <h3>Upcoming<br />Season</h3>
+            <p>Explore the fresh collection</p>
+            <button class="btn-outline-white" data-route="/shop?tag=new">Collection</button>
+          </div>
+          <div class="promo-card promo-purple">
+            <span class="promo-eyebrow">Seasonal</span>
+            <h3>Winter<br />50% Off</h3>
+            <p>Clearance sale ends soon</p>
+            <button class="btn-outline-white" data-route="/shop?tag=sale">Shop Now</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== NEWSLETTER ========== -->
+      <section id="newsletter">
+        <div class="newsletter-card">
+          <div class="nl-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="nl-text">
+            <h3>Stay in the Loop</h3>
+            <p>Latest drops, deals &amp; news — straight to your inbox.</p>
+          </div>
+          <div class="nl-form">
+            <input type="email" id="nl-input" placeholder="you@example.com" />
+            <button class="btn-primary" id="nl-btn">Subscribe</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="app-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="navbar-brand" data-route="/">
+            <img src="logo.png" class="brand-icon" alt="EtherX" />
+            <span>EtherX</span>
+          </a>
+          <p>Premium tech accessories for the modern Apple lifestyle.</p>
+          <div class="socials">
+            <a href="#" class="social-btn" title="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" class="social-btn" title="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-btn" title="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h6>Company</h6>
+          <a href="/about" data-route="/about">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h6>Support</h6>
+          <a href="/support" data-route="/support">Help Center</a>
+          <a href="/support" data-route="/support">Contact Us</a>
+          <a href="/support" data-route="/support">Returns</a>
+          <a href="/orders" data-route="/orders">Track Order</a>
+        </div>
+        <div class="footer-col">
+          <h6>My Account</h6>
+          <a href="/profile" data-route="/profile">My Profile</a>
+          <a href="/orders" data-route="/orders">My Orders</a>
+          <a href="/wishlist" data-route="/wishlist">Wishlist</a>
+          <a href="/cart" data-route="/cart">My Cart</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 EtherX. All rights reserved.</p>
+        <p>Crafted with using iOS design language</p>
+      </div>
+    </footer>
+
+    <!-- ========== AUTH MODAL ========== -->
+    <div class="modal-overlay" id="auth-modal" role="dialog" aria-modal="true">
+      <div class="modal-card">
+        <button class="modal-close" id="auth-close" aria-label="Close">&times;</button>
+        <!-- Tabs -->
+        <div class="modal-tabs">
+          <button class="modal-tab active" data-tab="login">Sign In</button>
+          <button class="modal-tab" data-tab="register">Create Account</button>
+        </div>
+
+        <!-- Sign In form -->
+        <form class="modal-form" id="login-form">
+          <div class="modal-brand">
+            <img src="logo.png" class="brand-icon" alt="EtherX" />
+            <span>EtherX</span>
+          </div>
+          <p class="modal-sub">Welcome back</p>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="li-email" placeholder="you@example.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="li-pass" placeholder="••••••••" autocomplete="current-password" />
+          </div>
+          <p class="modal-error" id="li-error"></p>
+          <button type="submit" class="btn-primary w-full" id="li-btn">Sign In</button>
+        </form>
+
+        <!-- Register form -->
+        <form class="modal-form hidden" id="register-form">
+          <div class="modal-brand">
+            <img src="logo.png" class="brand-icon" alt="EtherX" />
+            <span>EtherX</span>
+          </div>
+          <p class="modal-sub">Create your account</p>
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="reg-name" placeholder="Jane Appleseed" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="reg-email" placeholder="you@example.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="reg-pass" placeholder="Min. 6 characters" autocomplete="new-password" />
+          </div>
+          <p class="modal-error" id="reg-error"></p>
+          <button type="submit" class="btn-primary w-full" id="reg-btn">Create Account</button>
+        </form>
+        <!-- OTP Verification step -->
+        <div class="modal-form hidden" id="otp-step">
+          <div class="modal-brand">
+            <img src="logo.png" class="brand-icon" alt="EtherX" />
+            <span>EtherX</span>
+          </div>
+          <p class="modal-sub">Verify your email</p>
+          <p style="font-size:.85rem;color:var(--text-secondary,#666);text-align:center;margin:-8px 0 16px;">
+            We sent a 6-digit code to<br><strong id="otp-email-display" style="color:var(--text-primary,#111)"></strong>
+          </p>
+          <div class="form-group">
+            <label>Verification Code</label>
+            <input type="text" id="otp-input" placeholder="000000" maxlength="6"
+                   inputmode="numeric" autocomplete="one-time-code"
+                   style="letter-spacing:.35em;font-size:1.4rem;text-align:center;" />
+          </div>
+          <p class="modal-error" id="otp-error"></p>
+          <button type="button" class="btn-primary w-full" id="otp-verify-btn">Verify &amp; Create Account</button>
+          <p style="text-align:center;margin-top:14px;font-size:.82rem;color:var(--text-secondary,#666);">
+            Didn't receive it?
+            <button type="button" id="otp-resend-btn"
+                    style="background:none;border:none;cursor:pointer;color:inherit;font:inherit;text-decoration:underline;padding:0;">
+              Resend
+            </button>
+            <span id="otp-resend-timer" style="display:none;"> in <span id="otp-countdown">60</span>s</span>
+          </p>
+          <p style="text-align:center;margin-top:8px;font-size:.82rem;">
+            <button type="button" id="otp-back-btn"
+                    style="background:none;border:none;cursor:pointer;color:var(--accent,#0071e3);font:inherit;padding:0;">
+              ← Back to Sign Up
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+      <div class="drawer-header">
+        <h3>Your Cart</h3>
+        <button class="drawer-close" id="drawer-close" aria-label="Close cart">&times;</button>
+      </div>
+      <div class="drawer-body" id="cart-body">
+        <div class="cart-empty" id="cart-empty">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".3"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <p>Your cart is empty</p>
+          <span>Add some items to get started</span>
+        </div>
+        <div id="cart-items-list"></div>
+      </div>
+      <div class="drawer-footer" id="cart-footer" style="display:none;">
+        <div class="cart-totals">
+          <div class="ct-row"><span>Subtotal</span><span id="ct-sub">₹0.00</span></div>
+          <div class="ct-row"><span>Shipping</span><span id="ct-ship">Free</span></div>
+          <div class="ct-row ct-tax"><span>Tax (8%)</span><span id="ct-tax">₹0.00</span></div>
+          <div class="ct-row ct-total"><span>Total</span><span id="ct-total">₹0.00</span></div>
+        </div>
+        <button class="btn-primary w-full" id="checkout-btn">Proceed to Checkout →</button>
+        <button class="btn-secondary w-full" id="view-cart-btn" style="margin-top:8px;">View Full Cart</button>
+        <p class="cart-note">Secure checkout · Free returns</p>
+      </div>
+    </aside>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ========== PRODUCT DETAIL MODAL ========== -->
+    <div class="modal-overlay" id="product-modal" role="dialog" aria-modal="true">
+      <div class="product-modal-card">
+        <button class="modal-close" id="product-modal-close" aria-label="Close">&times;</button>
+        <div id="product-modal-body"><!-- filled by JS --></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
