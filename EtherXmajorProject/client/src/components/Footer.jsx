@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2024 EtherX. All rights reserved.</p>
+        <p>© 2026 EtherX. All rights reserved.</p>
         <p>Crafted with iOS design language</p>
       </div>
     </footer>

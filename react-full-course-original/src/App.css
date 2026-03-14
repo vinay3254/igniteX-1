@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+}
+
+.top {
+  grid-column: 1 / -1;
+  background: #111827;
+  color: #f9fafb;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.top h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.top p {
+  margin: 0;
+  color: #d1d5db;
+}
+
+.lesson-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  padding-right: 0.25rem;
+}
+
+.lesson-nav button {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+}
+
+.lesson-nav button.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.lesson-stage {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.lesson-stage h2 {
+  margin-top: 0;
+}
+
+.lesson-description {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.demo-card {
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #f8fafc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+}
+
+.simple-card {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  padding: 0.8rem;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  color: #fff;
+  background: #111827;
+  display: inline-block;
+}
+
+.color-box {
+  height: 80px;
+  border-radius: 8px;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+}
+
+.line-through {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.demo-block {
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.theme-light {
+  background: #f9fafb;
+  color: #111827;
+}
+
+.theme-dark {
+  background: #111827;
+  color: #f9fafb;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input,
+select {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.4rem 0.5rem;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 0.65rem;
+  background: #1d4ed8;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+}

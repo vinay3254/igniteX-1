@@ -1,0 +1,26 @@
+<!doctype html>
+<!--
+How it works:
+1) Open this file in a browser.
+2) Interact with the page elements.
+3) Open DevTools Console to observe JavaScript behavior.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canvas API</title>
+</head>
+<body>
+  <canvas id="c" width="300" height="150" style="border:1px solid #ccc"></canvas>
+<script>
+  const ctx = document.getElementById('c').getContext('2d');
+  ctx.fillStyle = 'orange';
+  ctx.fillRect(20, 20, 120, 60);
+  ctx.beginPath();
+  ctx.arc(220, 75, 30, 0, Math.PI * 2);
+  ctx.fillStyle = 'teal';
+  ctx.fill();
+</script>
+</body>
+</html>

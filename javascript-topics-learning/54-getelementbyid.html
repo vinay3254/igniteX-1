@@ -1,0 +1,24 @@
+<!doctype html>
+<!--
+How it works:
+1) Open this file in a browser.
+2) Interact with the page elements.
+3) Open DevTools Console to observe JavaScript behavior.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>getElementById()</title>
+</head>
+<body>
+  <p id="msg">Hello</p>
+<button id="btn">Change text</button>
+<script>
+  const msg = document.getElementById('msg');
+  document.getElementById('btn').onclick = () => {
+    msg.textContent = 'Text changed using getElementById()';
+  };
+</script>
+</body>
+</html>

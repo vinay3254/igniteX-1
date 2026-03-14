@@ -1,0 +1,30 @@
+<!doctype html>
+<!--
+How it works:
+1) Open this file in a browser.
+2) Interact with the page elements.
+3) Open DevTools Console to observe JavaScript behavior.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animations</title>
+</head>
+<body>
+  <div id="ball"></div>
+<style>
+#ball { width:40px; height:40px; border-radius:50%; background:#0078d4; position:relative; left:0; }
+</style>
+<script>
+  const ball = document.getElementById('ball');
+  let x = 0;
+  function animate() {
+    x += 2;
+    ball.style.left = x + 'px';
+    if (x < 300) requestAnimationFrame(animate);
+  }
+  animate();
+</script>
+</body>
+</html>

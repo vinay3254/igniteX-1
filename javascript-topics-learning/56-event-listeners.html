@@ -1,0 +1,22 @@
+<!doctype html>
+<!--
+How it works:
+1) Open this file in a browser.
+2) Interact with the page elements.
+3) Open DevTools Console to observe JavaScript behavior.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event listeners</title>
+</head>
+<body>
+  <button id="clickMe">Click me</button>
+<script>
+  document.getElementById('clickMe').addEventListener('click', () => {
+    alert('Button clicked!');
+  });
+</script>
+</body>
+</html>

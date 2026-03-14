@@ -1,0 +1,24 @@
+<!doctype html>
+<!--
+How it works:
+1) Open this file in a browser.
+2) Interact with the page elements.
+3) Open DevTools Console to observe JavaScript behavior.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Window object</title>
+</head>
+<body>
+  <button id="info">Window info</button>
+<p id="out"></p>
+<script>
+  document.getElementById('info').onclick = () => {
+    document.getElementById('out').textContent =
+      `Width: ${window.innerWidth}, Height: ${window.innerHeight}`;
+  };
+</script>
+</body>
+</html>
