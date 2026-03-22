@@ -1,28 +1,138 @@
-/*.Student{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size:2em;
-  padding:10px;
-  border: 1px solid rgb(214, 38, 38)
+:root {
+  color: #14213d;
+  background:
+    radial-gradient(circle at top, rgba(255, 210, 140, 0.45), transparent 35%),
+    linear-gradient(180deg, #fffaf1 0%, #f5efe3 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
-.student{
-  margin:0;
-}*/
-
-.Welcome-message{
-  font-size: large;
-  background-color: aqua;
-  color:aliceblue;
-  padding:10px;
-  border-radius:5px;
-  margin:0;
+* {
+  box-sizing: border-box;
 }
 
-.Login-prompt {
-  font-size: large;
-  background-color: blue;
-  color: azure;
-  padding:10px;
-  border-radius:5px;
-  margin:0;
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  width: min(960px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+.hero {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: #a44a3f;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.hero-copy {
+  max-width: 40rem;
+  margin-top: 0.75rem;
+  color: #4a5568;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(20, 33, 61, 0.12);
+  border-radius: 20px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 14px 30px rgba(20, 33, 61, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.stack {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.Student {
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(20, 33, 61, 0.12);
+  border-radius: 14px;
+  background: #fffdf8;
+}
+
+.Student p {
+  margin: 0.2rem 0;
+}
+
+.welcome-message,
+.login-prompt {
+  display: inline-block;
+  margin: 0;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.welcome-message {
+  background: linear-gradient(135deg, #1f8a70, #1b5e20);
+}
+
+.login-prompt {
+  background: linear-gradient(135deg, #264653, #1d3557);
+}
+
+.lists {
+  display: grid;
+  gap: 1rem;
+}
+
+.list-card {
+  padding: 1rem;
+  border-radius: 14px;
+  background: #fffdf8;
+  border: 1px solid rgba(20, 33, 61, 0.12);
+}
+
+.list-card h3 {
+  margin-top: 0;
+}
+
+.list-card ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.25rem 0;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    width: min(100% - 1rem, 960px);
+    padding-top: 2rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
 }

@@ -2,6 +2,91 @@
 <html>
   <head>
     <title>chatbot</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #f4f7fb 0%, #e9eef6 100%);
+        color: #1f2937;
+      }
+
+      .app-shell {
+        width: min(680px, calc(100% - 32px));
+        margin: 32px auto;
+        padding: 24px;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+      }
+
+      .title {
+        margin: 0 0 20px;
+        font-size: 28px;
+      }
+
+      .chat-input {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .chat-input input {
+        flex: 1;
+        padding: 12px 14px;
+        border: 1px solid #cbd5e1;
+        border-radius: 12px;
+        font-size: 16px;
+      }
+
+      .chat-input button {
+        padding: 12px 18px;
+        border: none;
+        border-radius: 12px;
+        background: #2563eb;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .messages {
+        display: grid;
+        gap: 14px;
+      }
+
+      .message-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .message-row.user {
+        justify-content: flex-end;
+      }
+
+      .message-row.robot {
+        justify-content: flex-start;
+      }
+
+      .avatar {
+        width: 48px;
+        height: 48px;
+      }
+
+      .bubble {
+        max-width: 70%;
+        padding: 12px 14px;
+        border-radius: 16px;
+        line-height: 1.4;
+      }
+
+      .message-row.user .bubble {
+        background: #dbeafe;
+      }
+
+      .message-row.robot .bubble {
+        background: #e5e7eb;
+      }
+    </style>
   </head>
   <body>
     <div class="js-container"></div>
@@ -15,7 +100,7 @@
     <script type="text/babel">
       function ChatInput(){
         return(
-          <div>
+          <div className="chat-input">
             <input placeholder="send a message to chatbot" size="30"/>
             <button>Send</button>
           </div>
@@ -35,48 +120,50 @@
               </div>
           )
         }*/
+        const avatar = sender === 'robot' ? 'robot.png' : 'user.png';
+        const altText = sender === 'robot' ? 'Robot avatar' : 'User avatar';
+
         return (
-          <div>
-            {sender === 'robot' && <img src="robot.png" width="50"/>}
-            {message}
-            {sender === 'user' && <img src="user.png" width="50"/>}
-            </div>
-          );
+          <div className={`message-row ${sender}`}>
+            {sender === 'robot' && <img className="avatar" src={avatar} alt={altText} />}
+            <div className="bubble">{message}</div>
+            {sender === 'user' && <img className="avatar" src={avatar} alt={altText} />}
+          </div>
+        );
       }
 
       function App(){
-
-        const ChatMessage = [{
-          message: 'hello chatbot',
-          sender: 'user'
-          },
-        {
-          message:"hello! what's ur problem now",
-          sender:'robot'
+        const messages = [
+          {
+            message: 'hello chatbot',
+            sender: 'user'
           },
           {
-             message:"can u get me today's date",
-              sender:"user"
+            message:"hello! what's ur problem now",
+            sender:'robot'
           },
           {
-            message:"how tf i am suppose to know " ,
-            sender:"robot"
+            message:"can u get me today's date",
+            sender:"user"
           },
           {
             message:"how tf i am suppose to know ",
-             sender:"robot"
-          },
-          ]
+            sender:"robot"
+          }
+        ];
         return (
-          <div>
-        
-        
+          <div className="app-shell">
+        <h1 className="title">Chatbot</h1>
         <ChatInput /> 
-        <ChatMessage message="hello chatbot" sender="user"/>
-        <ChatMessage message="hello! what's ur problem now" sender="robot"/>
-        <ChatMessage message="can u get me today's date" sender="user"/>
-        <ChatMessage message="how tf i am suppose to know " sender="robot"/> 
-
+        <div className="messages">
+          {messages.map((chat, index) => (
+            <ChatMessage
+              key={`${chat.sender}-${index}`}
+              message={chat.message}
+              sender={chat.sender}
+            />
+          ))}
+        </div>
         </div>
         
 
