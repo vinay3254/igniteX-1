@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stories</title>
+    <link rel="stylesheet" href="./styles.css?v=4" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="feed-page">
+        <header class="feed-top">
+          <div class="feed-brand">
+            <p class="feed-kicker">Stories gallery</p>
+            <h1>Simple 24-hour showcase</h1>
+            <p class="feed-text">
+              A clean card feed for browser-only stories. Upload images, browse them in a tidy gallery, and let them
+              disappear after a day.
+            </p>
+          </div>
+
+          <div class="feed-actions">
+            <input id="story-file-input" class="visually-hidden" type="file" accept="image/*" multiple />
+            <button id="add-story-button" class="add-story-button" type="button" aria-label="Add a new story">
+              <span class="add-story-icon" aria-hidden="true">+</span>
+              <span id="add-story-label">Add Story</span>
+            </button>
+          </div>
+        </header>
+
+        <section class="feed-toolbar" aria-label="Story overview">
+          <article class="overview-pill">
+            <span class="overview-label">Live stories</span>
+            <strong id="story-count" class="overview-value">0</strong>
+          </article>
+
+          <article class="overview-pill">
+            <span class="overview-label">Next expiry</span>
+            <strong id="next-expiry" class="overview-value">Waiting</strong>
+          </article>
+
+          <article class="overview-pill">
+            <span class="overview-label">Storage</span>
+            <strong id="storage-usage" class="overview-value">0 KB</strong>
+          </article>
+        </section>
+
+        <section class="gallery-section">
+          <div class="gallery-head">
+            <div>
+              <p class="gallery-kicker">Latest uploads</p>
+              <h2>Clean card grid</h2>
+            </div>
+
+            <div class="chip-row" aria-hidden="true">
+              <span class="chip chip--active">All</span>
+              <span class="chip">UI</span>
+              <span class="chip">Branding</span>
+            </div>
+          </div>
+
+          <p id="story-count-note" class="gallery-note">Nothing has been posted yet.</p>
+          <div id="story-rail" class="story-grid" aria-label="Available stories"></div>
+        </section>
+
+        <footer class="feed-footer">
+          <p id="status-banner" class="status-banner" aria-live="polite"></p>
+          <p class="feed-footnote">Stories stay on this device and are removed automatically after 24 hours.</p>
+        </footer>
+      </main>
+    </div>
+
+    <section id="viewer" class="viewer" hidden aria-hidden="true">
+      <div class="viewer-shell" role="dialog" aria-modal="true" aria-label="Story viewer" tabindex="-1">
+        <div class="viewer-backdrop" id="viewer-backdrop"></div>
+
+        <div class="viewer-inner">
+          <div id="viewer-progress" class="viewer-progress" aria-hidden="true"></div>
+
+          <div class="viewer-header">
+            <div class="viewer-meta">
+              <span id="viewer-story-count" class="viewer-count"></span>
+              <strong id="viewer-story-title">Story</strong>
+              <p id="viewer-story-time"></p>
+            </div>
+
+            <button id="viewer-close" class="viewer-close" type="button" aria-label="Close story viewer">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+
+          <div id="viewer-frame" class="viewer-frame">
+            <button id="viewer-prev" class="tap-zone tap-zone-prev" type="button" aria-label="Previous story">
+              <span aria-hidden="true">‹</span>
+            </button>
+            <img id="viewer-image" class="viewer-image" alt="Selected story" />
+            <button id="viewer-next" class="tap-zone tap-zone-next" type="button" aria-label="Next story">
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+
+          <div class="viewer-footer">
+            <p id="viewer-expiry-note" class="viewer-expiry-note"></p>
+            <p class="viewer-hint">Swipe or use arrow keys to move between stories.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./app.js?v=4" defer></script>
+  </body>
+</html>
